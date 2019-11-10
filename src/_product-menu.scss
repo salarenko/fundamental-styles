@@ -7,7 +7,6 @@ $block-product-menu: #{$fd-namespace}-product-menu;
 .#{$block-product-menu} {
   @include fd-reset();
 
-  padding: 0 fd-space(2) 0 0;
   text-overflow: ellipsis;
   min-width: 0;
 
@@ -24,23 +23,31 @@ $block-product-menu: #{$fd-namespace}-product-menu;
   }
 
   &__control {
-    @include fd-var-color("background-color", fd-color("shell", 2), --fd-color-shell-2);
-
-    position: relative;
-
     @include fd-button-reset();
-    @include fd-var-size("height", $fd-forms-height, --fd-forms-height);
 
-    padding-right: 20px;
-    padding-left: 0;
+    padding-left: 0.625rem;
+    padding-right: 1.7rem;
+    position: relative;
+    height: 2.25rem;
+    color: var(--sapShell_TextColor);
+    background-color: transparent;
 
     @include fd-rtl() {
-      padding-right: 0;
-      padding-left: 20px;
+      padding-right: 0.625rem;
+      padding-left: 1.7rem;
+    }
+
+    &:hover {
+      background-color: var(--sapShell_Hover_Background);
+    }
+
+    &:active {
+      color: var(--sapShell_Active_TextColor);
+      background-color: var(--sapShell_Active_Background);
     }
 
     &::after {
-      @include triangle(10px 5px, fd-color("shell", 2), down, --fd-color-shell-2);
+      @include triangle(10px 5px, var(--sapShell_InteractiveTextColor), down, --sapShell_InteractiveTextColor);
 
       content: "";
       position: absolute;
