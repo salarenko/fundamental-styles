@@ -16,7 +16,7 @@ Busy indicators are not visible all the time, only when needed.
 <br>
 ## Busy indicator usage and size options
 {% capture busy-indicator %}
-<div style="display:flex;justify-content:center;flex-direction:column;align-items:center">
+<div style="display:flex;justify-content:space-around;flex-direction:column;align-items:center;height:100px">
     <div class="fd-busy-indicator--l" aria-hidden="false" aria-label="Loading">
         <div class="fd-busy-indicator--circle-0"></div>
         <div class="fd-busy-indicator--circle-1"></div>
