@@ -1,0 +1,11 @@
+{
+    "id": "accordion",
+    "name": "Accordion",
+    "properties": {
+    },
+    "modifier": {
+        "block": []
+    },
+    "state": {},
+    "aria": {}
+}

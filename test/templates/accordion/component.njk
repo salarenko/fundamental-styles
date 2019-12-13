@@ -1,0 +1,20 @@
+{%- macro accordion(properties={}) %}
+    <div class="fd-accordion fd-accordion--active">
+        <div class="fd-accordion__header">
+            <div class="fd-accordion__toggle-button">
+                <button>TGL</button>
+            </div>
+            <div class="fd-accordion__title">
+                Accordion title
+            </div>
+            <div class="fd-accordion__toolbar">
+                <button>Option 1</button>
+                <button>Option 2</button>
+                <button>Option 3</button>
+            </div>
+        </div>
+        <div class="fd-accordion__content">
+            Accordion header
+        </div>
+    </div>
+{%- endmacro %}

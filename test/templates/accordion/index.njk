@@ -1,0 +1,16 @@
+{% extends "layout.njk" %}
+{% from "./../format.njk" import format %}
+{% from "./component.njk" import accordion %}
+{% import "./../utils.njk" as utils %}
+
+{% block content %}
+    {% set example %}
+
+        {{ accordion(
+            properties={}
+        ) }}
+
+    {% endset %}
+    {{ format(example) }}
+
+{% endblock %}
