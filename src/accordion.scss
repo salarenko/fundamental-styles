@@ -8,11 +8,12 @@
 $block: #{$fd-namespace}-accordion;
 
 // ACCORDION
-$fd-accordion-header-height: 2.5rem;
 $fd-accordion-background-color: var(--sapGroup_TitleBackground);
 $fd-accordion-border: solid 0.0625rem var(--sapGroup_TitleBorderColor);
 
 // HEADER
+$fd-accordion-header-height: 2.5rem;
+$fd-accordion-header-height-mobile: 2.75rem;
 
 // TOGGLE BUTTON
 $fd-accordion-toggle-button-width: 2.75rem;
@@ -23,7 +24,6 @@ $fd-accordion-content-background-color: var(--sapGroup_ContentBackground);
 
 .#{$block} {
   border-bottom: $fd-accordion-border;
-  background-color: $fd-accordion-background-color;
 
   &--active {
     .#{$block}__content {
@@ -37,6 +37,10 @@ $fd-accordion-content-background-color: var(--sapGroup_ContentBackground);
     justify-content: space-between;
     min-height: $fd-accordion-header-height;
 
+    @include media-breakpoint-down("l") {
+      min-height: $fd-accordion-header-height-mobile;
+    }
+
     .#{$block}__toggle-button {
       @include fd-flex-center();
       // TODO
@@ -45,6 +49,8 @@ $fd-accordion-content-background-color: var(--sapGroup_ContentBackground);
     }
 
     .#{$block}__title {
+      @include fd-type("1", "normal");
+
       flex-grow: 1;
       display: flex;
       align-items: center;
@@ -60,6 +66,9 @@ $fd-accordion-content-background-color: var(--sapGroup_ContentBackground);
   &__content {
     display: none;
     padding: $fd-accordion-content-padding;
-    background-color: $fd-accordion-content-background-color;
+
+    &--solid {
+      background-color: $fd-accordion-content-background-color;
+    }
   }
 }

@@ -2,6 +2,7 @@
     "id": "accordion",
     "name": "Accordion",
     "properties": {
+        "id": ""
     },
     "modifier": {
         "block": []

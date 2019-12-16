@@ -1,9 +1,24 @@
+{%- macro setup_accordion_logic()%}
+    <script>
+        function accordionToggle(id) {
+            const accordion = document.getElementById(id);
+            const isExpanded = accordion.classList.contains("fd-accordion--active");
+            if (isExpanded) {
+                accordion.classList.remove("fd-accordion--active");
+            } else {
+                accordion.classList.add("fd-accordion--active");
+            }
+        }
+    </script>
+{%- endmacro %}
+
+
 {%- macro accordion(properties={}) %}
-    <div class="fd-accordion fd-accordion--active">
+    <div id="{{ properties.id }}" class="fd-accordion">
         <div class="fd-accordion__header">
-            <div class="fd-accordion__toggle-button">
-                <button>TGL</button>
-            </div>
+            <button class="btn-playground fd-accordion__toggle-button"
+                onclick="accordionToggle('{{ properties.id }}')">
+            </button>
             <div class="fd-accordion__title">
                 Accordion title
             </div>
