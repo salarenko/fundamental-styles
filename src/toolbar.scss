@@ -1,0 +1,70 @@
+@import "./settings";
+@import "./mixins";
+@import "./functions";
+
+/*!
+.fd-toolbar
+*/
+$block: #{$fd-namespace}-toolbar;
+
+.#{$block} {
+
+  // TOOLBAR
+  $fd-toolbar-height: 2rem;
+  $fd-toolbar-padding: 0 0.5rem;
+  $fd-toolbar-border-color: var(--sapGroup_TitleBorderColor);
+  $fd-toolbar-border: solid 0.0625rem $fd-toolbar-border-color;
+
+  $fd-toolbar-background: (
+    "default": (
+      "normal": contrast(var(--sapActiveColor), darken(var(--sapActiveColor), 3), lighten(var(--sapActiveColor), 3)),
+      "hover": contrast(var(--sapActiveColor), darken(var(--sapActiveColor), 3), lighten(var(--sapActiveColor), 3)),
+      "active": var(--sapActiveColor)
+    ),
+    "info": (
+      "normal": var(--sapInfobar_Hover_Background),
+      "hover": var(--sapInfobar_Hover_Background),
+      "active": var(--sapInfobar_Active_Background)
+    ),
+    "solid": (
+      "normal": contrast(var(--sapBackgroundColor), darken(var(--sapBackgroundColor), 3), lighten(var(--sapBackgroundColor), 3)),
+      "hover": contrast(var(--sapBackgroundColor), darken(var(--sapBackgroundColor), 3), lighten(var(--sapBackgroundColor), 3)),
+      "active": var(--sapActiveColor)
+    ),
+    "transparent": (
+      "normal": var(--sapToolbar_Background),
+      "hover": contrast(var(--sapToolbar_Background), darken(var(--sapToolbar_Background), 3), lighten(var(--sapToolbar_Background), 3)),
+      "active": var(--sapActiveColor)
+    )
+  );
+
+  @mixin toolbar-background($state-map) {
+    background: map-get($state-map, "normal");
+
+    @include fd-active() {
+      background: map-get($state-map, "active");
+    }
+
+    @include fd-hover() {
+      background: map-get($state-map, "hover");
+    }
+  }
+
+  background: transparent;
+  height: $fd-toolbar-height;
+  padding: $fd-toolbar-padding;
+
+  @each $kind, $sub-map in $fd-toolbar-background {
+    @if ($kind == "default") {
+      @include toolbar-background($sub-map);
+    } @else {
+      &--#{$kind} {
+        @include toolbar-background($sub-map);
+      }
+    }
+  }
+
+  &--bordered {
+    border-bottom: $fd-toolbar-border;
+  }
+}

@@ -1,0 +1,10 @@
+{
+    "id": "toolbar",
+    "name": "Toolbar",
+    "properties": "",
+    "modifier": {
+        "block": []
+    },
+    "state": {},
+    "aria": {}
+}

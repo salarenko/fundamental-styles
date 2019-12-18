@@ -1,0 +1,14 @@
+{% extends "layout.njk" %}
+{% from "./../format.njk" import format %}
+{% from "./component.njk" import toolbar %}
+
+{% block content %}
+
+    {% set example %}
+
+        {{ toolbar() }}
+
+    {% endset %}
+    {{ format(example) }}
+
+{% endblock %}
