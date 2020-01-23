@@ -121,11 +121,11 @@ calendar:
     {%- endif %}
   {%- endif %}
   {%- set _is_today = date === properties.today and _is_other_month == false %}
-  {%- set _is_weekend = (loop.index % 7 == 6 or loop.index % 7 == 0) and not _is_other_month %}
+  {%- set _is_weekend = (loop.index % 7 == 1 or loop.index % 7 == 0) and not _is_other_month %}
   {%- set _is_blocked = (date > properties.dates.block[0] and date < properties.dates.block[1]) and not _is_other_month %}
-  {%- set _is_selected = date === properties.dates.selected and not _is_other_month %}
+  {%- set _is_active = date === properties.dates.selected and not _is_other_month %}
   {%- if properties.dates.selectedRange and not _is_other_month %}
-    {%- set _is_selected = date === properties.dates.selectedRange[0] or date === properties.dates.selectedRange[1] %}
+    {%- set _is_active = date === properties.dates.selectedRange[0] or date === properties.dates.selectedRange[1] %}
     {%- set _is_selected_range = date > properties.dates.selectedRange[0] and date < properties.dates.selectedRange[1] %}
     {%- set _is_selected_range_first = date == properties.dates.selectedRange[0] %}
     {%- set _is_selected_range_last = date == properties.dates.selectedRange[1] %}
@@ -135,7 +135,7 @@ calendar:
           'current' if _is_today else '',
           'weekend' if _is_weekend else '',
           'range' if _is_selected_range else ''
-        ] },state={disabled: _is_disabled, active: _is_selected},aria={ role: 'gridcell' }) }}
+        ] },state={disabled: _is_disabled, active: _is_active},aria={ role: 'gridcell' }) }}
       {%- endfor %}
       </tr>
     </tbody>
@@ -158,7 +158,7 @@ calendar:
         <tr class="fd-calendar__row">
         {%-endif %}
         {%- set _is_current = properties.month === loop.index0 %}
-        {%- set _is_selected = properties.months.selected === loop.index0 %}
+        {%- set _is_active = properties.months.selected === loop.index0 %}
           {{ calendar_item(month.name | truncate(3, true, "."),modifier={ 'item': ['current' if _is_current else '' ] },state={}) }}
         {%- endfor %}
         </tr>
@@ -174,18 +174,61 @@ calendar:
   <div class="fd-calendar__content fd-calendar__content--years{{ state | state}} {{is_hidden}}" id="{{id}}">
     <table class="fd-calendar__table"{{ { role: 'grid' } | aria }}>
       <tbody class="fd-calendar__group">
+      {%- if not properties.years.range %}
         <tr class="fd-calendar__row">
-        {%- for i in range(0,12) %}
-        {%- if (loop.index0) % 4 == 0 and not loop.first%}
-        </tr>
-        <tr class="fd-calendar__row">
-        {%-endif %}
-        {%- set year = properties.year + loop.index0 %}
-        {%- set _is_current = properties.year === year %}
-        {%- set _is_selected = properties.years.selected === loop.index0 %}
-          {{ calendar_item(properties.year + loop.index0,modifier={ 'item': ['current' if _is_current else '' ] },state={ blocked: _is_blocked, selected: _is_selected }) }}
+        {%- for i in range(0,20) %}
+          {%- if (loop.index0) % 5 == 0 and not loop.first %}
+            </tr>
+            <tr class="fd-calendar__row">
+          {%- endif %}
+          {%- set year = properties.year + loop.index0 %}
+          {%- set _is_current = properties.year === year %}
+          {%- set _is_active = properties.years.selected === loop.index0 %}
+          {{ calendar_item(properties.year + loop.index0,modifier={ 'item': ['current' if _is_current else '' ] },state={ blocked: _is_blocked, active: _is_active }) }}
         {%- endfor %}
         </tr>
+      {%- elseif properties.years.range == 'normal' %}
+      <tr class="fd-calendar__row">
+        {%- for i in range(0,9) %}
+        {%- if (loop.index0) % 3 == 0 and not loop.first %}
+      </tr>
+      <tr class="fd-calendar__row">
+        {%- endif %}
+          {%- set year_rage_start = properties.year + 10 * loop.index0 %}
+          {%- set year_rage_end = properties.year + 10 * (loop.index0 + 1) %}
+          {%- set _is_current = properties.year === year_rage_start %}
+          {%- set _is_active = properties.years.selected === loop.index0 %}
+          {{ calendar_item(year_rage_start + " - " + year_rage_end,modifier={ 'item': ['current' if _is_current else '' ] },state={ blocked: _is_blocked, active: _is_active }) }}
+        {%- endfor %}
+      </tr>
+      {%- elseif properties.years.range == 'wide' %}
+      <tr class="fd-calendar__row">
+        {%- for i in range(0,6) %}
+        {%- if (loop.index0) % 2 == 0 and not loop.first %}
+      </tr>
+      <tr class="fd-calendar__row">
+        {%- endif %}
+          {%- set year_rage_start = properties.year + 10 * loop.index0 %}
+          {%- set year_rage_end = properties.year + 10 * (loop.index0 + 1) %}
+          {%- set _is_current = properties.year === year_rage_start %}
+          {%- set _is_active = properties.years.selected === loop.index0 %}
+          {{ calendar_item(year_rage_start + " AD - " + year_rage_end + " AD",modifier={ 'item': ['current' if _is_current else '' ] },state={ blocked: _is_blocked, active: _is_active }) }}
+        {%- endfor %}
+      </tr>
+      {%- elseif properties.years.range == 'full' %}
+      <tr class="fd-calendar__row">
+        {%- for i in range(0,5) %}
+      </tr>
+      <tr class="fd-calendar__row">
+        {%- set year_rage_start = properties.year + loop.index0 %}
+        {%- set year_rage_end = properties.year + 10 %}
+        {%- set year = properties.year + loop.index0 %}
+        {%- set _is_current = properties.year === year_rage_start %}
+        {%- set _is_active = properties.years.selected === loop.index0 %}
+        {{ calendar_item(year_rage_start + " Showa - " + year_rage_end + " Showa",modifier={ 'item': ['current' if _is_current else '' ] },state={ blocked: _is_blocked, active: _is_active }) }}
+        {%- endfor %}
+      </tr>
+      {%- endif %}
       </tbody>
     </table>
   </div>

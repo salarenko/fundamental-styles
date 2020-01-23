@@ -36,11 +36,6 @@ This are classes used to describe the look general look of calendar.
           <td class="fd-calendar__item fd-calendar__item--side-helper" role="gridcell"></td>
         </tr>
         <tr class="fd-calendar__row">
-          <td role="gridcell"><code>.fd-calendar__content--days</code></td>
-          <td role="gridcell">Class used to style calendar content when calendar displays days</td>
-          <td class="fd-calendar__item fd-calendar__item--side-helper" role="gridcell"></td>
-        </tr>
-        <tr class="fd-calendar__row">
           <td role="gridcell"><code>.fd-calendar__content--months</code></td>
           <td role="gridcell">Class used to style calendar content when calendar displays months</td>          
           <td class="fd-calendar__item fd-calendar__item--side-helper" role="gridcell"></td>
@@ -65,32 +60,32 @@ This are classes used to describe the look of calendar grid element.
         <tr class="fd-calendar__row">
           <td role="gridcell"><code>.fd-calendar__item</code></td>
           <td role="gridcell">Base class used to represent calendar cell</td>
-          <td class="fd-calendar__item" role="gridcell"><span class="fd-calendar__text" role="button">30</span></td>
+          <td style="width: 2rem;" class="fd-calendar__item" role="gridcell"><span class="fd-calendar__text" role="button">30</span></td>
         </tr>
         <tr class="fd-calendar__row">
           <td role="gridcell"><code>.fd-calendar__item--side-helper</code></td>
           <td role="gridcell">Class used for styling calendar grid side-helpers like week number or day shortcut</td>
-          <td class="fd-calendar__item fd-calendar__item--side-helper" role="gridcell">1</td>
+          <td style="width: 2rem;" class="fd-calendar__item fd-calendar__item--side-helper" role="gridcell">1</td>
         </tr>
         <tr class="fd-calendar__row">
           <td role="gridcell"><code>.fd-calendar__item--other-month</code></td>
           <td role="gridcell">Class used to style days outside of current month</td>
-          <td class="fd-calendar__item fd-calendar__item--other-month"><span class="fd-calendar__text" role="button">30</span></td>
+          <td style="width: 2rem;" class="fd-calendar__item fd-calendar__item--other-month"><span class="fd-calendar__text" role="button">30</span></td>
         </tr>
         <tr class="fd-calendar__row">
           <td role="gridcell"><code>.fd-calendar__item--current</code></td>
           <td role="gridcell">Class used to style current day, month or year</td>
-          <td class="fd-calendar__item fd-calendar__item--current"><span class="fd-calendar__text" role="button">30</span></td>
+          <td style="width: 2rem;" class="fd-calendar__item fd-calendar__item--current"><span class="fd-calendar__text" role="button">30</span></td>
         </tr>
         <tr class="fd-calendar__row">
           <td role="gridcell"><code>.fd-calendar__item--weekend</code></td>
           <td role="gridcell">Class used to style weekend days</td>
-          <td class="fd-calendar__item fd-calendar__item--weekend"><span class="fd-calendar__text" role="button">30</span></td>
+          <td style="width: 2rem;" class="fd-calendar__item fd-calendar__item--weekend"><span class="fd-calendar__text" role="button">30</span></td>
         </tr>
         <tr class="fd-calendar__row">
           <td role="gridcell"><code>.fd-calendar__item--range</code></td>
           <td role="gridcell">Class used to style calendar elements placed between range start and end elements</td>
-          <td class="fd-calendar__item fd-calendar__item--range"><span class="fd-calendar__text" role="button">30</span></td>
+          <td style="width: 2rem;" class="fd-calendar__item fd-calendar__item--range"><span class="fd-calendar__text" role="button">30</span></td>
         </tr>
       </tbody>
     </table>
@@ -107,17 +102,17 @@ This are classes used to describe state of calendar grid element.
         <tr class="fd-calendar__row">
           <td role="gridcell"><code>.is-active</code></td>
           <td role="gridcell">Class used to style calendar elements selected by user</td>
-          <td class="fd-calendar__item is-active"><span class="fd-calendar__text" role="button">30</span></td>
+          <td style="width: 2rem;" class="fd-calendar__item is-active"><span class="fd-calendar__text" role="button">30</span></td>
         </tr>
         <tr class="fd-calendar__row">
           <td role="gridcell"><code>.is-disabled</code></td>
           <td role="gridcell">Class used to style disabled calendar elements</td>
-          <td class="fd-calendar__item is-disabled"><span class="fd-calendar__text" role="button">30</span></td>
+          <td style="width: 2rem;" class="fd-calendar__item is-disabled"><span class="fd-calendar__text" role="button">30</span></td>
         </tr>
         <tr class="fd-calendar__row">
           <td role="gridcell"><code>.is-focus</code></td>
           <td role="gridcell">Class used to style focused calendar elements</td>
-          <td class="fd-calendar__item is-focus"><span class="fd-calendar__text" role="button">30</span></td>
+          <td style="width: 2rem;" class="fd-calendar__item is-focus"><span class="fd-calendar__text" role="button">30</span></td>
         </tr>
       </tbody>
     </table>
@@ -132,90 +127,90 @@ This are classes used to describe the look of calendar grid element.
     <table class="fd-calendar__table" role="grid">
       <thead>
         <tr class="fd-calendar__row">
-            <td><code>.fd-calendar__special-day</code></td>
-            <td><code>--1</code></td>
-            <td><code>--2</code></td>
-            <td><code>--3</code></td>
-            <td><code>--4</code></td>
-            <td><code>--5</code></td>
-            <td><code>--6</code></td>
-            <td><code>--7</code></td>
-            <td><code>--8</code></td>
-            <td><code>--9</code></td>
-            <td><code>--10</code></td>
-            <td><code>--11</code></td>
-            <td><code>--12</code></td>
-            <td><code>--13</code></td>
-            <td><code>--14</code></td>
-            <td><code>--15</code></td>
-            <td><code>--16</code></td>
-            <td><code>--17</code></td>
-            <td><code>--18</code></td>
-            <td><code>--19</code></td>
-            <td><code>--20</code></td>
+            <td><code>.fd-calendar__special-day--</code></td>
+            <td><code>1</code></td>
+            <td><code>2</code></td>
+            <td><code>3</code></td>
+            <td><code>4</code></td>
+            <td><code>5</code></td>
+            <td><code>6</code></td>
+            <td><code>7</code></td>
+            <td><code>8</code></td>
+            <td><code>9</code></td>
+            <td><code>10</code></td>
+            <td><code>11</code></td>
+            <td><code>12</code></td>
+            <td><code>13</code></td>
+            <td><code>14</code></td>
+            <td><code>15</code></td>
+            <td><code>16</code></td>
+            <td><code>17</code></td>
+            <td><code>18</code></td>
+            <td><code>19</code></td>
+            <td><code>20</code></td>
         </tr>
       </thead>
       <tbody class="fd-calendar__group">
         <tr class="fd-calendar__row">
           <td role="gridcell"></td>
-          <td class="fd-calendar__item fd-calendar__special-day--1" role="gridcell">
+          <td style="width: 2rem;" class="fd-calendar__item fd-calendar__special-day--1" role="gridcell">
             <span class="fd-calendar__text" role="button">30</span>
           </td>
-          <td class="fd-calendar__item fd-calendar__special-day--2" role="gridcell">
+          <td style="width: 2rem;" class="fd-calendar__item fd-calendar__special-day--2" role="gridcell">
             <span class="fd-calendar__text" role="button">30</span>
           </td>
-          <td class="fd-calendar__item fd-calendar__special-day--3" role="gridcell">
+          <td style="width: 2rem;" class="fd-calendar__item fd-calendar__special-day--3" role="gridcell">
             <span class="fd-calendar__text" role="button">30</span>
           </td>
-          <td class="fd-calendar__item fd-calendar__special-day--4" role="gridcell">
+          <td style="width: 2rem;" class="fd-calendar__item fd-calendar__special-day--4" role="gridcell">
             <span class="fd-calendar__text" role="button">30</span>
           </td>
-          <td class="fd-calendar__item fd-calendar__special-day--5" role="gridcell">
+          <td style="width: 2rem;" class="fd-calendar__item fd-calendar__special-day--5" role="gridcell">
             <span class="fd-calendar__text" role="button">30</span>
           </td>
-          <td class="fd-calendar__item fd-calendar__special-day--6" role="gridcell">
+          <td style="width: 2rem;" class="fd-calendar__item fd-calendar__special-day--6" role="gridcell">
             <span class="fd-calendar__text" role="button">30</span>
           </td>
-          <td class="fd-calendar__item fd-calendar__special-day--7" role="gridcell">
+          <td style="width: 2rem;" class="fd-calendar__item fd-calendar__special-day--7" role="gridcell">
             <span class="fd-calendar__text" role="button">30</span>
           </td>
-          <td class="fd-calendar__item fd-calendar__special-day--8" role="gridcell">
+          <td style="width: 2rem;" class="fd-calendar__item fd-calendar__special-day--8" role="gridcell">
             <span class="fd-calendar__text" role="button">30</span>
           </td>
-          <td class="fd-calendar__item fd-calendar__special-day--9" role="gridcell">
+          <td style="width: 2rem;" class="fd-calendar__item fd-calendar__special-day--9" role="gridcell">
             <span class="fd-calendar__text" role="button">30</span>
           </td>
-          <td class="fd-calendar__item fd-calendar__special-day--10" role="gridcell">
+          <td style="width: 2rem;" class="fd-calendar__item fd-calendar__special-day--10" role="gridcell">
             <span class="fd-calendar__text" role="button">30</span>
           </td>
-          <td class="fd-calendar__item fd-calendar__special-day--11" role="gridcell">
+          <td style="width: 2rem;" class="fd-calendar__item fd-calendar__special-day--11" role="gridcell">
             <span class="fd-calendar__text" role="button">30</span>
           </td>
-          <td class="fd-calendar__item fd-calendar__special-day--12" role="gridcell">
+          <td style="width: 2rem;" class="fd-calendar__item fd-calendar__special-day--12" role="gridcell">
             <span class="fd-calendar__text" role="button">30</span>
           </td>
-          <td class="fd-calendar__item fd-calendar__special-day--13" role="gridcell">
+          <td style="width: 2rem;" class="fd-calendar__item fd-calendar__special-day--13" role="gridcell">
             <span class="fd-calendar__text" role="button">30</span>
           </td>
-          <td class="fd-calendar__item fd-calendar__special-day--14" role="gridcell">
+          <td style="width: 2rem;" class="fd-calendar__item fd-calendar__special-day--14" role="gridcell">
             <span class="fd-calendar__text" role="button">30</span>
           </td>
-          <td class="fd-calendar__item fd-calendar__special-day--15" role="gridcell">
+          <td style="width: 2rem;" class="fd-calendar__item fd-calendar__special-day--15" role="gridcell">
             <span class="fd-calendar__text" role="button">30</span>
           </td>
-          <td class="fd-calendar__item fd-calendar__special-day--16" role="gridcell">
+          <td style="width: 2rem;" class="fd-calendar__item fd-calendar__special-day--16" role="gridcell">
             <span class="fd-calendar__text" role="button">30</span>
           </td>
-          <td class="fd-calendar__item fd-calendar__special-day--17" role="gridcell">
+          <td style="width: 2rem;" class="fd-calendar__item fd-calendar__special-day--17" role="gridcell">
             <span class="fd-calendar__text" role="button">30</span>
           </td>
-          <td class="fd-calendar__item fd-calendar__special-day--18" role="gridcell">
+          <td style="width: 2rem;" class="fd-calendar__item fd-calendar__special-day--18" role="gridcell">
             <span class="fd-calendar__text" role="button">30</span>
           </td>
-          <td class="fd-calendar__item fd-calendar__special-day--19" role="gridcell">
+          <td style="width: 2rem;" class="fd-calendar__item fd-calendar__special-day--19" role="gridcell">
             <span class="fd-calendar__text" role="button">30</span>
           </td>
-          <td class="fd-calendar__item fd-calendar__special-day--20" role="gridcell">
+          <td style="width: 2rem;" class="fd-calendar__item fd-calendar__special-day--20" role="gridcell">
             <span class="fd-calendar__text" role="button">30</span>
           </td>
         </tr>
@@ -274,16 +269,16 @@ This are classes used to describe the look of calendar grid element.
                     <span class="fd-calendar__text" role="button">2</span></td>
                 <td class="fd-calendar__item fd-calendar__special-day--6">
                     <span class="fd-calendar__text" role="button">3</span></td>
-                <td class="fd-calendar__item fd-calendar__item--weekend">
+                <td class="fd-calendar__item">
                     <span class="fd-calendar__text" role="button">4</span></td>
-                <td class="fd-calendar__item fd-calendar__item--weekend is-active">
+                <td class="fd-calendar__item fd-calendar__item--weekend">
                     <span class="fd-calendar__text" role="button">5</span></td>
             </tr>
             <tr class="fd-calendar__row">
                 <td class="fd-calendar__item fd-calendar__item--side-helper" role="gridcell">2</td>
-                <td class="fd-calendar__item fd-calendar__item--range">
+                <td class="fd-calendar__item fd-calendar__item--weekend ">
                     <span class="fd-calendar__text" role="button">6</span></td>
-                <td class="fd-calendar__item fd-calendar__item--range">
+                <td class="fd-calendar__item is-active">
                     <span class="fd-calendar__text" role="button">7</span></td>
                 <td class="fd-calendar__item fd-calendar__item--range">
                     <span class="fd-calendar__text" role="button">8</span></td>
@@ -291,48 +286,48 @@ This are classes used to describe the look of calendar grid element.
                     <span class="fd-calendar__text" role="button">9</span></td>
                 <td class="fd-calendar__item fd-calendar__item--range">
                     <span class="fd-calendar__text" role="button">10</span></td>
-                <td class="fd-calendar__item fd-calendar__item--weekend fd-calendar__item--range">
+                <td class="fd-calendar__item fd-calendar__item--range">
                     <span class="fd-calendar__text" role="button">11</span></td>
-                <td class="fd-calendar__item fd-calendar__item--weekend fd-calendar__item--range">
+                <td class="fd-calendar__item fd-calendar__item--weekend fd-calendar__item--current fd-calendar__special-day--6 is-active">
                     <span class="fd-calendar__text" role="button">12</span></td>
             </tr>
             <tr class="fd-calendar__row">
                 <td class="fd-calendar__item fd-calendar__item--side-helper" role="gridcell">3</td>
-                <td class="fd-calendar__item fd-calendar__item--range">
+                <td class="fd-calendar__item fd-calendar__item--weekend ">
                     <span class="fd-calendar__text" role="button">13</span></td>
-                <td class="fd-calendar__item fd-calendar__item--range">
+                <td class="fd-calendar__item ">
                     <span class="fd-calendar__text" role="button">14</span></td>
-                <td class="fd-calendar__item fd-calendar__item--range">
+                <td class="fd-calendar__item ">
                     <span class="fd-calendar__text" role="button">15</span></td>
-                <td class="fd-calendar__item fd-calendar__item--range">
+                <td class="fd-calendar__item ">
                     <span class="fd-calendar__text" role="button">16</span></td>
-                <td class="fd-calendar__item fd-calendar__item--range">
+                <td class="fd-calendar__item ">
                     <span class="fd-calendar__text" role="button">17</span></td>
-                <td class="fd-calendar__item fd-calendar__item--weekend fd-calendar__item--range">
+                <td class="fd-calendar__item ">
                     <span class="fd-calendar__text" role="button">18</span></td>
-                <td class="fd-calendar__item fd-calendar__item--weekend fd-calendar__item--range">
+                <td class="fd-calendar__item fd-calendar__item--weekend ">
                     <span class="fd-calendar__text" role="button">19</span></td>
             </tr>
             <tr class="fd-calendar__row">
                 <td class="fd-calendar__item fd-calendar__item--side-helper" role="gridcell">4</td>
-                <td class="fd-calendar__item fd-calendar__item--current is-active fd-calendar__special-day--1">
+                <td class="fd-calendar__item fd-calendar__item--weekend">
                     <span class="fd-calendar__text" role="button">20</span></td>
-                <td class="fd-calendar__item fd-calendar__special-day--1">
+                <td class="fd-calendar__item">
                     <span class="fd-calendar__text" role="button">21</span></td>
-                <td class="fd-calendar__item fd-calendar__special-day--1">
+                <td class="fd-calendar__item">
                     <span class="fd-calendar__text" role="button">22</span></td>
                 <td class="fd-calendar__item">
                     <span class="fd-calendar__text" role="button">23</span></td>
-                <td class="fd-calendar__item fd-calendar__special-day--2">
+                <td class="fd-calendar__item fd-calendar__special-day--3">
                     <span class="fd-calendar__text" role="button">24</span></td>
-                <td class="fd-calendar__item fd-calendar__item--weekend fd-calendar__special-day--3">
+                <td class="fd-calendar__item fd-calendar__special-day--3">
                     <span class="fd-calendar__text" role="button">25</span></td>
                 <td class="fd-calendar__item fd-calendar__item--weekend">
                     <span class="fd-calendar__text" role="button">26</span></td>
             </tr>
             <tr class="fd-calendar__row">
                 <td class="fd-calendar__item fd-calendar__item--side-helper" role="gridcell">5</td>
-                <td class="fd-calendar__item is-disabled">
+                <td class="fd-calendar__item fd-calendar__item--weekend is-disabled">
                     <span class="fd-calendar__text" role="button">27</span></td>
                 <td class="fd-calendar__item is-disabled">
                     <span class="fd-calendar__text" role="button">28</span></td>
@@ -423,22 +418,22 @@ This are classes used to describe the look of calendar grid element.
 <div class="fd-calendar">
     <header class="fd-calendar__header">
         <div class="fd-calendar__navigation">
-			<div class="fd-calendar__action fd-calendar__action--arrow-left">
-    			<button type="button" class="fd-button--standard fd-button--light sap-icon--slim-arrow-left" aria-label="Previous"></button>
-    		</div>
-    		<div class="fd-calendar__action">
-    			<button type="button" class="fd-button--light" aria-selected="false" aria-expanded="false" aria-controls="fm3cr569">January</button>
-    		</div>
-    		<div class="fd-calendar__action">
-    			<button type="button" class="fd-button--light" aria-selected="true" aria-expanded="true" aria-controls="bufLe361">2018</button>
-    		</div>
-    		<div class="fd-calendar__action fd-calendar__action--arrow-right">
-    			<button type="button" class="fd-button--standard fd-button--light sap-icon--slim-arrow-right" aria-label="Next"></button>
-    		</div>
+            <div class="fd-calendar__action fd-calendar__action--arrow-left">
+                <button type="button" class="fd-button--standard fd-button--light sap-icon--slim-arrow-left" aria-label="Previous"></button>
+            </div>
+            <div class="fd-calendar__action">
+                <button type="button" class="fd-button--light" aria-selected="false" aria-expanded="false" aria-controls="fm3cr569">January</button>
+            </div>
+            <div class="fd-calendar__action">
+                <button type="button" class="fd-button--light" aria-selected="true" aria-expanded="true" aria-controls="bufLe361">2018</button>
+            </div>
+            <div class="fd-calendar__action fd-calendar__action--arrow-right">
+                <button type="button" class="fd-button--standard fd-button--light sap-icon--slim-arrow-right" aria-label="Next"></button>
+            </div>
         </div>
     </header>
-    
-    <div class="fd-calendar__content fd-calendar__content--years " id="57YUZ521">
+
+    <div class="fd-calendar__content fd-calendar__content--years " id="5W9Yo873">
         <table class="fd-calendar__table" role="grid">
             <tbody class="fd-calendar__group">
             <tr class="fd-calendar__row">
@@ -448,28 +443,46 @@ This are classes used to describe the look of calendar grid element.
                     <span class="fd-calendar__text" role="button">2019</span></td>
                 <td class="fd-calendar__item">
                     <span class="fd-calendar__text" role="button">2020</span></td>
-                <td class="fd-calendar__item is-selected" aria-selected="true">
+                <td class="fd-calendar__item is-active">
                     <span class="fd-calendar__text" role="button">2021</span></td>
-            </tr>
-            <tr class="fd-calendar__row">
                 <td class="fd-calendar__item">
                     <span class="fd-calendar__text" role="button">2022</span></td>
+            </tr>
+            <tr class="fd-calendar__row">
                 <td class="fd-calendar__item">
                     <span class="fd-calendar__text" role="button">2023</span></td>
                 <td class="fd-calendar__item">
                     <span class="fd-calendar__text" role="button">2024</span></td>
                 <td class="fd-calendar__item">
                     <span class="fd-calendar__text" role="button">2025</span></td>
-            </tr>
-            <tr class="fd-calendar__row">
                 <td class="fd-calendar__item">
                     <span class="fd-calendar__text" role="button">2026</span></td>
-                <td class="fd-calendar__item is-active">
+                <td class="fd-calendar__item">
                     <span class="fd-calendar__text" role="button">2027</span></td>
+            </tr>
+            <tr class="fd-calendar__row">
                 <td class="fd-calendar__item">
                     <span class="fd-calendar__text" role="button">2028</span></td>
                 <td class="fd-calendar__item">
                     <span class="fd-calendar__text" role="button">2029</span></td>
+                <td class="fd-calendar__item">
+                    <span class="fd-calendar__text" role="button">2030</span></td>
+                <td class="fd-calendar__item">
+                    <span class="fd-calendar__text" role="button">2031</span></td>
+                <td class="fd-calendar__item">
+                    <span class="fd-calendar__text" role="button">2032</span></td>
+            </tr>
+            <tr class="fd-calendar__row">
+                <td class="fd-calendar__item">
+                    <span class="fd-calendar__text" role="button">2033</span></td>
+                <td class="fd-calendar__item">
+                    <span class="fd-calendar__text" role="button">2034</span></td>
+                <td class="fd-calendar__item">
+                    <span class="fd-calendar__text" role="button">2035</span></td>
+                <td class="fd-calendar__item">
+                    <span class="fd-calendar__text" role="button">2036</span></td>
+                <td class="fd-calendar__item">
+                    <span class="fd-calendar__text" role="button">2037</span></td>
             </tr>
             </tbody>
         </table>
@@ -526,16 +539,16 @@ This are classes used to describe the look of calendar grid element.
                     <span class="fd-calendar__text" role="button">2</span></td>
                 <td class="fd-calendar__item fd-calendar__special-day--6">
                     <span class="fd-calendar__text" role="button">3</span></td>
-                <td class="fd-calendar__item fd-calendar__item--weekend">
+                <td class="fd-calendar__item">
                     <span class="fd-calendar__text" role="button">4</span></td>
-                <td class="fd-calendar__item fd-calendar__item--weekend is-active">
+                <td class="fd-calendar__item fd-calendar__item--weekend">
                     <span class="fd-calendar__text" role="button">5</span></td>
             </tr>
             <tr class="fd-calendar__row">
                 <td class="fd-calendar__item fd-calendar__item--side-helper" role="gridcell">2</td>
-                <td class="fd-calendar__item fd-calendar__item--range">
+                <td class="fd-calendar__item fd-calendar__item--weekend ">
                     <span class="fd-calendar__text" role="button">6</span></td>
-                <td class="fd-calendar__item fd-calendar__item--range">
+                <td class="fd-calendar__item is-active">
                     <span class="fd-calendar__text" role="button">7</span></td>
                 <td class="fd-calendar__item fd-calendar__item--range">
                     <span class="fd-calendar__text" role="button">8</span></td>
@@ -543,48 +556,48 @@ This are classes used to describe the look of calendar grid element.
                     <span class="fd-calendar__text" role="button">9</span></td>
                 <td class="fd-calendar__item fd-calendar__item--range">
                     <span class="fd-calendar__text" role="button">10</span></td>
-                <td class="fd-calendar__item fd-calendar__item--weekend fd-calendar__item--range">
+                <td class="fd-calendar__item fd-calendar__item--range">
                     <span class="fd-calendar__text" role="button">11</span></td>
-                <td class="fd-calendar__item fd-calendar__item--weekend fd-calendar__item--range">
+                <td class="fd-calendar__item fd-calendar__item--weekend fd-calendar__item--current fd-calendar__special-day--6 is-active">
                     <span class="fd-calendar__text" role="button">12</span></td>
             </tr>
             <tr class="fd-calendar__row">
                 <td class="fd-calendar__item fd-calendar__item--side-helper" role="gridcell">3</td>
-                <td class="fd-calendar__item fd-calendar__item--range">
+                <td class="fd-calendar__item fd-calendar__item--weekend ">
                     <span class="fd-calendar__text" role="button">13</span></td>
-                <td class="fd-calendar__item fd-calendar__item--range">
+                <td class="fd-calendar__item ">
                     <span class="fd-calendar__text" role="button">14</span></td>
-                <td class="fd-calendar__item fd-calendar__item--range">
+                <td class="fd-calendar__item ">
                     <span class="fd-calendar__text" role="button">15</span></td>
-                <td class="fd-calendar__item fd-calendar__item--range">
+                <td class="fd-calendar__item ">
                     <span class="fd-calendar__text" role="button">16</span></td>
-                <td class="fd-calendar__item fd-calendar__item--range">
+                <td class="fd-calendar__item ">
                     <span class="fd-calendar__text" role="button">17</span></td>
-                <td class="fd-calendar__item fd-calendar__item--weekend fd-calendar__item--range">
+                <td class="fd-calendar__item ">
                     <span class="fd-calendar__text" role="button">18</span></td>
-                <td class="fd-calendar__item fd-calendar__item--weekend fd-calendar__item--range">
+                <td class="fd-calendar__item fd-calendar__item--weekend ">
                     <span class="fd-calendar__text" role="button">19</span></td>
             </tr>
             <tr class="fd-calendar__row">
                 <td class="fd-calendar__item fd-calendar__item--side-helper" role="gridcell">4</td>
-                <td class="fd-calendar__item fd-calendar__item--current is-active fd-calendar__special-day--1">
+                <td class="fd-calendar__item fd-calendar__item--weekend">
                     <span class="fd-calendar__text" role="button">20</span></td>
-                <td class="fd-calendar__item fd-calendar__special-day--1">
+                <td class="fd-calendar__item">
                     <span class="fd-calendar__text" role="button">21</span></td>
-                <td class="fd-calendar__item fd-calendar__special-day--1">
+                <td class="fd-calendar__item">
                     <span class="fd-calendar__text" role="button">22</span></td>
                 <td class="fd-calendar__item">
                     <span class="fd-calendar__text" role="button">23</span></td>
-                <td class="fd-calendar__item fd-calendar__special-day--2">
+                <td class="fd-calendar__item fd-calendar__special-day--3">
                     <span class="fd-calendar__text" role="button">24</span></td>
-                <td class="fd-calendar__item fd-calendar__item--weekend fd-calendar__special-day--3">
+                <td class="fd-calendar__item fd-calendar__special-day--3">
                     <span class="fd-calendar__text" role="button">25</span></td>
                 <td class="fd-calendar__item fd-calendar__item--weekend">
                     <span class="fd-calendar__text" role="button">26</span></td>
             </tr>
             <tr class="fd-calendar__row">
                 <td class="fd-calendar__item fd-calendar__item--side-helper" role="gridcell">5</td>
-                <td class="fd-calendar__item is-disabled">
+                <td class="fd-calendar__item fd-calendar__item--weekend is-disabled">
                     <span class="fd-calendar__text" role="button">27</span></td>
                 <td class="fd-calendar__item is-disabled">
                     <span class="fd-calendar__text" role="button">28</span></td>
